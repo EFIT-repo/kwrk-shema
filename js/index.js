@@ -162,6 +162,16 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.onmouseup = moveEnd;
     canvas.onmouseleave = moveEnd;
 
+    canvas.onwheel = function (e) {
+        let delta = e.deltaY / -300;
+
+        canvasScale += delta;
+
+        canvasScale = canvasScale < 0.5 ? 0.5 : (canvasScale > 2 ? 2 : canvasScale);
+
+        setCanvasPosition(canvasX, canvasY, canvasScale, canvas, canvasWrapper);
+    }
+
     let buttonZoomin = $("#ksbtn-zoomin");
     let buttonZoomout = $("#ksbtn-zoomout");
 

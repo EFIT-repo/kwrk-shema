@@ -206,10 +206,10 @@ $arrow: #1B1B1B;
             background: none;
 
             &:hover {
-
+                background: none !important;
 
                 & path {
-                    fill: $white-color
+                    fill: $light-red-color
                 }
             }
         }
@@ -329,9 +329,12 @@ $arrow: #1B1B1B;
             width: 18px;
         }
 
+        &:hover {
+            background-color: $light-red-color !important;
+        }
+
         &:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+            background-color: $main-color !important;
         }
     }
 
@@ -354,6 +357,10 @@ $arrow: #1B1B1B;
         line-height: 24px;
         font-weight: 600;
         font-family: Qanelas;
+
+        &:hover {
+            border-color: $light-red-color;
+        }
     }
 
     &arrow {
